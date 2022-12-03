@@ -84,6 +84,13 @@ public class Calculator implements ActionListener {
         new Calculator();
     }
 
+    public void setText(int optionValue) {
+        if (optionValue == 0) {
+            textField1.setText("");
+            textField2.setText("");
+        }
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         String firstText = textField1.getText();
@@ -97,37 +104,25 @@ public class Calculator implements ActionListener {
                 double result = firstNumber + secondNumber;
                 JOptionPane.showMessageDialog(frame, "The result is : " + result);
                 int option = JOptionPane.showConfirmDialog(frame, "Want to clear input");
-                if (option == 0) {
-                    textField1.setText("");
-                    textField2.setText("");
-                }
+                setText(option);
 
             } else if (e.getSource() == subButton) {
                 double result = firstNumber - secondNumber;
                 JOptionPane.showMessageDialog(frame, "The result is : " + result);
                 int option = JOptionPane.showConfirmDialog(frame, "Want to clear input");
-                if (option == 0) {
-                    textField1.setText("");
-                    textField2.setText("");
-                }
+                setText(option);
 
             } else if (e.getSource() == mulButton) {
                 double result = firstNumber * secondNumber;
                 JOptionPane.showMessageDialog(frame, "The result is : " + result);
                 int option = JOptionPane.showConfirmDialog(frame, "Want to clear input");
-                if (option == 0) {
-                    textField1.setText("");
-                    textField2.setText("");
-                }
+                setText(option);
 
             } else {
                 double result = firstNumber / secondNumber;
                 JOptionPane.showMessageDialog(frame, "The result is : " + result);
                 int option = JOptionPane.showConfirmDialog(frame, "Want to clear input");
-                if (option == 0) {
-                    textField1.setText("");
-                    textField2.setText("");
-                }
+                setText(option);
             }
         } catch (NumberFormatException et) {
             JOptionPane.showMessageDialog(frame, "Please provide an integer value");
