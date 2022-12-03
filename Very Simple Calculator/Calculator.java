@@ -97,18 +97,37 @@ public class Calculator implements ActionListener {
                 double result = firstNumber + secondNumber;
                 JOptionPane.showMessageDialog(frame, "The result is : " + result);
                 int option = JOptionPane.showConfirmDialog(frame, "Want to clear input");
-                System.out.println(option);
+                if (option == 0) {
+                    textField1.setText("");
+                    textField2.setText("");
+                }
 
             } else if (e.getSource() == subButton) {
                 double result = firstNumber - secondNumber;
                 JOptionPane.showMessageDialog(frame, "The result is : " + result);
+                int option = JOptionPane.showConfirmDialog(frame, "Want to clear input");
+                if (option == 0) {
+                    textField1.setText("");
+                    textField2.setText("");
+                }
 
             } else if (e.getSource() == mulButton) {
                 double result = firstNumber * secondNumber;
                 JOptionPane.showMessageDialog(frame, "The result is : " + result);
+                int option = JOptionPane.showConfirmDialog(frame, "Want to clear input");
+                if (option == 0) {
+                    textField1.setText("");
+                    textField2.setText("");
+                }
+
             } else {
                 double result = firstNumber / secondNumber;
                 JOptionPane.showMessageDialog(frame, "The result is : " + result);
+                int option = JOptionPane.showConfirmDialog(frame, "Want to clear input");
+                if (option == 0) {
+                    textField1.setText("");
+                    textField2.setText("");
+                }
             }
         } catch (NumberFormatException et) {
             JOptionPane.showMessageDialog(frame, "Please provide an integer value");
