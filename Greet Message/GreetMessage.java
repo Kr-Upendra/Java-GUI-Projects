@@ -1,4 +1,6 @@
 import javax.swing.*;
+
+import java.awt.Window;
 import java.awt.event.*;
 
 public class GreetMessage implements ActionListener {
@@ -25,7 +27,6 @@ public class GreetMessage implements ActionListener {
         frame.setSize(400, 300);
         frame.setVisible(true);
         frame.setResizable(false);
-        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 
     }
 
