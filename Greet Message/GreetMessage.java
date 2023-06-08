@@ -1,6 +1,4 @@
 import javax.swing.*;
-
-import java.awt.Window;
 import java.awt.event.*;
 
 public class GreetMessage implements ActionListener {
